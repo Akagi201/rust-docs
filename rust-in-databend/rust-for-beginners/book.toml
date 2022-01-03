@@ -1,0 +1,6 @@
+[book]
+authors = ["Databend"]
+language = "cn"
+multilingual = false
+src = "src"
+title = "Rust 新手入门"
