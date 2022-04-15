@@ -104,3 +104,22 @@ parachain A 的验证人也会读取出站队列并知道该消息。Parachain B
 收集人现在把这个区块交给验证人，验证人本身将验证这个消息是否被处理。如果消息被处理了，并且区块的所有其他方面都是有效的，验证器将把 parachain B 区块纳入中继链。
 
 请看我们下面的动画视频，它探讨了 XCMP 的工作原理。
+
+[![XCMP](assets/xcmp_video.png)](https://www.bilibili.com/video/BV1L3411n7bC?share_source=copy_web "XCMP")
+
+## XCVM(Cross-Consensus Virtual Machine，跨共识虚拟机)
+
+一种超高水平的非图灵完备计算机，其指令的设计方式与交易大致处于同一水平。
+
+XCM 中的信息只是一个在 XCVM 上运行的程序：换句话说，就是一个或多个 XCM 指令。要了解更多关于 XCVM 和 XCM 格式的信息，请看 Gavin Wood 博士的最新[博文](https://medium.com/polkadot-network/xcm-the-cross-consensus-message-format-3b77b1373392)。
+
+## 如何做跨链转账
+
+关于向下、向上和横向转账的教程可以在[这里](https://wiki.polkadot.network/zh-CN/docs/build-pdk#testing-a-parachain)找到。
+
+## 资源
+
+* [XCM: 跨共识消息格式](https://medium.com/polkadot-network/xcm-the-cross-consensus-message-format-3b77b1373392) - Gavin Wood 博士关于 XCM 格式的详细博文。
+* [XCM 格式](https://github.com/paritytech/xcm-format) - 描述通过 XCMP 发送的高层次 XCM 格式。
+* [XCMP Schema](https://research.web3.foundation/en/latest/polkadot/XCMP.html) - 在 Web3 基金会研究维基上对跨链通信进行了完整的技术描述。
+* [消息概览](https://w3f.github.io/parachain-implementers-guide/messaging.html) - 平行链实现指南中的信息传递方案概述。
