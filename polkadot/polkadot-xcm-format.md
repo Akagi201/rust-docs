@@ -24,7 +24,7 @@ Polkadot 有三个主要的传输系统，用于在链之间传递消息，所�
 - **XCMP** *Cross-Chain Message Passing* 平行链之间的安全消息传递。有两个变种。*Direct*和*Relay*。
   - 在*Direct*模式下，消息数据在平行链之间直接传递，在中继链方面是 O(1)，并且是非常可扩展的。
   - 在*Relayed*模式下，消息数据通过中继链传递，并在 VMP 上捎带着进行。它的可扩展性要差得多，特别是平行线程 (parathreads) 可能会因为队列的过度增长而无法收到消息。
-- **VMP* *Vertical Message Passing* 在中继链本身和平行链之间传递消息。两种情况下的消息数据都存在于 Relay-chain 上。这包括。
+- **VMP** *Vertical Message Passing* 在中继链本身和平行链之间传递消息。两种情况下的消息数据都存在于 Relay-chain 上。这包括。
   - **UMP** *Upward Message Passing* 从一个平行链到中继链的消息传递。
   - **DMP** *Downward Message Passing* 从中继链到平行链的消息传递。
 
