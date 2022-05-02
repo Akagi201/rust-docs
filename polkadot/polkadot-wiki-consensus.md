@@ -89,3 +89,30 @@ GRANDPA（GHOST-based Recursive ANcestor Deriving Prefix Agreement）是为 Polk
 ![consensus_fork_choice](assets/consensus_fork_choice.png)
 
 在上图中，黑色区块是最终确定的，而黄色区块不是。标有 "1" 的区块是一级区块；标有 "2" 的区块是二级区块。尽管最上面的链是最新完成的区块上最长的链，但它并不符合条件，因为在评估时它的主块比下面的主块少。
+
+## 对比
+
+### 中本聪共识 (Nakamoto)
+
+中本聪的共识由最长链规则组成，使用工作量证明作为其抵抗女巫攻击机制和领导人选举。
+
+中本聪共识只给了我们概率上的最终一致性。概率最终一致性指出，过去的一个区块的安全程度仅与它的确认数量有关，或在它上面建立的区块数量。当更多的区块被建立在工作量证明链中的特定区块之上时，这个特定的链背后已经花费了更多的计算工作。然而，这并不能保证包含该区块的链将始终是商定的链，因为一个拥有无限资源的行为者有可能建立一个竞争链，并花费足够的计算资源来创建一个不包含特定区块的链。在这种情况下，比特币和其他工作量证明链采用的最长链规则将转移到这个新的链上来作为经典的链。
+
+### PBFT / Tendermint
+
+请参考 [Cosmos 对比文章](https://wiki.polkadot.network/docs/learn-comparisons-cosmos#consensus)中相关内容
+
+### Casper FFG
+
+GRANDPA 和 Casper FFG 之间的两个主要区别是：
+
+* 在 GRANDPA 中，不同的投票者可以同时对不同高度的区块进行投票
+* GRANDPA 只依赖于最终确定的区块来影响底层区块生产机制的分叉选择规则
+
+## 资源
+
+* [BABE 论文](https://research.web3.foundation/en/latest/polkadot/block-production/Babe.html) - BABE 协议的学术描述。
+* [GRANDPA 论文](https://github.com/w3f/consensus/blob/master/pdf/grandpa.pdf) - GRANDPA 最终一致性程序的学术描述。
+* [Rust 实现](https://github.com/paritytech/finality-grandpa) - 参考实现和对应的 [Substrate pallet](https://github.com/paritytech/substrate/tree/master/frame/grandpa)
+* [区块生成和波卡中最终一致性](https://www.crowdcast.io/e/polkadot-block-production) - 解释 BABE 和 GRANDPA 如何共同制作和敲定 Kusama 的区块，by Bill Laboon。
+* [波卡中区块生成和最终一致性](https://www.youtube.com/watch?v=1CuTSluL7v4&t=4s) - Bill Laboon 在 MIT Cryptoeconomic Systems 2020 的学术演讲，深入描述了 Polkadot 的混合共识模型。
