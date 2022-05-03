@@ -1,4 +1,8 @@
-# 共识
+# Substrate 中共识
+
+> 原文链接：<https://docs.substrate.io/v3/advanced/consensus/>
+>
+> 翻译：[Akagi201](https://github.com/Akagi201)
 
 区块链节点使用共识引擎来在区块链状态上达成一致。本文介绍了区块链系统中共识的基本原理，共识如何与 Substrate 框架中的运行时互动，以及该框架可用的共识引擎。
 

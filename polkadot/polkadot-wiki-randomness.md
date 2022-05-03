@@ -1,4 +1,4 @@
-# 随机性
+# 波卡中的随机性
 
 > 原文链接：<https://wiki.polkadot.network/docs/learn-randomness>
 >
