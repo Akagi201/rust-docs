@@ -1,4 +1,4 @@
-# 波卡共识 Part 2: BABE
+# 波卡共识 Part 3: BABE
 
 > 原文链接：<https://polkadot.network/blog/polkadot-consensus-part-3-babe/>
 >
